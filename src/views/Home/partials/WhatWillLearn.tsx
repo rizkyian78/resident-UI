@@ -1,9 +1,10 @@
 import React from 'react'
-import { Button, Card, Col, Row } from 'antd'
+import { Button, Card, Col, Row, Carousel } from 'antd'
 import Title from '@nexys/components/Typography/Title'
 import { CardProps } from 'antd/lib/card'
 import Link from 'next/link'
 import LazyImgwrapper from '@nexys/components/LazyImgWrapper'
+import Image from 'next/dist/client/image'
 
 interface LearnItemProps extends CardProps {
   urlTitleIcon?: string
@@ -12,6 +13,7 @@ interface LearnItemProps extends CardProps {
   title?: string | React.ReactNode
   totalFiles?: number
   directory?: string
+  image?: any[]
 }
 
 function LearnItem(props: LearnItemProps) {
@@ -25,8 +27,17 @@ function LearnItem(props: LearnItemProps) {
     urlExample,
     totalFiles,
     directory,
+    image,
     ...restProps
   } = props
+
+  const contentStyle: React.CSSProperties = {
+    // height: '160px',
+    color: '#fff',
+    // lineHeight: '160px',
+    textAlign: 'center',
+    // background: '#364d79',
+  };
 
   const curUrlExample =
     urlExample || (totalFiles > 1 ? `/examples/${directory}` : null)
@@ -54,14 +65,7 @@ function LearnItem(props: LearnItemProps) {
                 rel={'noopener noreferrer'}
                 style={{ display: 'inline' }}
               >
-                <Button>Go to Documentation</Button>
-              </a>
-            </Link>
-          ),
-          curUrlExample && (
-            <Link href={curUrlExample}>
-              <a>
-                <Button type={'primary'}>View Example</Button>
+                <Button>Get Brochure</Button>
               </a>
             </Link>
           ),
@@ -82,7 +86,23 @@ function LearnItem(props: LearnItemProps) {
         </div>
       }
     >
-      {children}
+      <Carousel style={{
+        height: 500
+      }}>
+      {image && image.length > 0 && image.map((v, i) => {
+        return (
+      <div>
+      <div style={contentStyle}><Image
+       width={500}
+       height={600}
+        src={v.source}
+        alt={'tampak dapur'}
+      /></div>
+    </div>
+
+        )
+      })}
+      </Carousel>
     </Card>
   )
 }
@@ -96,13 +116,10 @@ function WhatWillLearn(props: WhatWillLearnProps) {
   return (
     <Row>
       <Col xs={24} style={{ textAlign: 'center' }}>
-        <Title size={30}>What will you learn?</Title>
+        <Title size={30}>Tipe Rumah</Title>
       </Col>
       <Col xs={24}>
         <Row gutter={[20, 20]} justify={'center'}>
-          <Col xs={24}>
-            <Title noMargin>Library</Title>
-          </Col>
           {data.map((learnItem) => {
             return (
               <Col xs={24} md={12} key={learnItem.urlDocumentation}>

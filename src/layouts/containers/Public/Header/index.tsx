@@ -27,17 +27,19 @@ function Header(props: BaseHeaderProps) {
             </Link>
           </Col>
           <Col>
-            <Title noMargin style={{ padding: 6 }}>
-              Nexys
+            <Title noMargin style={{ padding: 6 }} italic>
+              Grand Ashoka
             </Title>
           </Col>
         </Row>
       </Col>
       <Col flex={'auto'} style={{ textAlign: 'end' }}>
         <Link href={'#contributors'}>
-          <a>
+          <a onClick={() => {
+            window.location.replace("whatsapp://send/?phone=+6285234326153&text=Halo Saya ingin bertanya tentang perumahan" );
+          }}>
             <Button danger>
-              <Text fontFamily={'bold'}>Contributors</Text>
+              <Text fontFamily={'bold'}>Contact Us</Text>
             </Button>
           </a>
         </Link>

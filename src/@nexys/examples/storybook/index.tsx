@@ -4,4 +4,5 @@ export default {
   children: 'Build bulletproof UI components faster',
   urlTitleIcon: 'https://storybook.js.org/images/logos/icon-storybook.png',
   urlDocumentation: 'https://storybook.js.org/',
+  image: [],
 }

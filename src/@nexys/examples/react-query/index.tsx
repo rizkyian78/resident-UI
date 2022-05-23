@@ -8,4 +8,5 @@ export default {
     'Performant and powerful data synchronization.' +
     '\nFetch, cache and update data ' +
     'in your React and React Native applications all without touching any "global state".',
+  image: [],
 }

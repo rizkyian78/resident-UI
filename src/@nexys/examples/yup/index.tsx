@@ -9,4 +9,5 @@ export default {
     'Yup schema are extremely expressive and allow modeling complex, ' +
     'interdependent validations, or value transformations.',
   urlDocumentation: 'https://github.com/jquense/yup',
+  image: [],
 }

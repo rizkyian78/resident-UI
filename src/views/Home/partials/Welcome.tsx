@@ -1,46 +1,84 @@
 import React from 'react'
-import { Button, Col, Row } from 'antd'
+import { Button, Col, Row, Carousel, Typography } from 'antd'
 import Title from '@nexys/components/Typography/Title'
 import Text from '@nexys/components/Typography/Text'
 import Image from 'next/dist/client/image'
 import Link from 'next/link'
 
+const contentStyle: React.CSSProperties = {
+  color: '#fff',
+  textAlign: 'center',
+  borderRadius: 30
+};
+
+  const onChange = (currentSlide: number) => {
+    console.log(currentSlide);
+  };
+
 function Welcome() {
   return (
-    <Row gutter={[10, 0]}>
-      <Col xs={24} sm={12} style={{ alignSelf: 'center' }}>
-        <Row gutter={[0, 10]}>
-          <Col xs={24}>
-            <Title size={30} noMargin>
-              Hello Team!
-            </Title>
-          </Col>
-          <Col xs={24}>
-            <Text size={24}>
-              Mulai pelajari cara mudah mengembangkan Front-End menggunakan
-              Framework Next.js
-            </Text>
-          </Col>
-          <Col xs={24}>
-            <Link href={'/#whatWillLearn'}>
-              <a>
-                <Button size={'large'} type={'primary'}>
-                  <Text>PELAJARI</Text>
-                </Button>
-              </a>
-            </Link>
-          </Col>
-        </Row>
-      </Col>
-      <Col xs={24} sm={12}>
-        <Image
-          width={444}
-          height={306}
-          src={'/static/images/character.png'}
-          alt={'illustration'}
+    <>
+    <Typography.Title style={{alignItems: "center"}} level={1}>Japanese Box House (On Design)</Typography.Title>
+      <Carousel afterChange={onChange} autoplay>
+      <div>
+        <div style={contentStyle}>
+          <Image
+          width={900}
+          height={700}
+          src={'/static/images/rumah_jepang_depan.jpeg'}
+          alt={'tampak depan'}
         />
-      </Col>
-    </Row>
+        </div>
+      </div>
+      <div>
+      <div style={contentStyle}><Image
+          width={900}
+          height={700}
+          src={'/static/images/rumah_jepang_tampak_dalam.webp'}
+          alt={'tampak dalam'}
+        /></div>
+      </div>
+      <div>
+      <div style={contentStyle}><Image
+         width={900}
+         height={700}
+          src={'/static/images/rumah_jepang_dapur.webp'}
+          alt={'tampak dapur'}
+        /></div>
+      </div>
+      <div>
+      <div style={contentStyle}>
+        <Image
+          width={900}
+          height={700}
+          src={'/static/images/rumah_jepang_tampak_ruang_depan.jpeg'}
+          alt={'tampak ruang depan'}
+        />
+        </div>
+      </div>
+      <div>
+      <div style={contentStyle}>
+        <Image
+          width={900}
+          height={700}
+          src={'/static/images/rumah_jepang_tampak_westafel.jpeg'}
+          alt={'tampak westafel'}
+        />
+        </div>
+      </div>
+      <div>
+      <div style={contentStyle}>
+        <Image
+          width={900}
+          height={700}
+          src={'/static/images/rumah_jepang_tampak_toilet.jpeg'}
+          alt={'tampak toilet'}
+        />
+        </div>
+      </div>
+      
+    </Carousel>
+    </>
   )
 }
 

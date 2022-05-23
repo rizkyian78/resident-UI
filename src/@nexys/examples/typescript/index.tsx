@@ -7,4 +7,5 @@ export default {
   children:
     'Typed JavaScript at Any Scale. TypeScript extends JavaScript by adding types. ' +
     'By understanding JavaScript, TypeScript saves you time catching errors and providing fixes before you run code',
+  image: [],
 }
