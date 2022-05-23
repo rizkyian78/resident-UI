@@ -13,9 +13,9 @@ function useTitleAndError(options: UseTitleAndErrorProps) {
     return <Text>{title}</Text>
   }, [title])
 
-  const nodeError = name && <ErrorView name={name} />
+  // const nodeError = name && <ErrorView name={name} />
 
-  return [nodeTitle, nodeError]
+  // return [nodeTitle, nodeError]
 }
 
 export default useTitleAndError

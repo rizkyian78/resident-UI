@@ -17,11 +17,11 @@ export type FInputNumberProps = InputNumberProps &
 
 function FInputNumber(props: FInputNumberProps) {
   const [field, , helpers] = useField(props as any)
-  const [title, error] = useTitleAndError(props)
+  // const [title, error] = useTitleAndError(props)
 
   return (
     <React.Fragment>
-      {title}
+      {/* {title} */}
       <InputNumber
         {...field}
         min={0}
@@ -38,7 +38,7 @@ function FInputNumber(props: FInputNumberProps) {
         style={{ width: '100%' }}
         {...props}
       />
-      {error}
+      {/* {error} */}
     </React.Fragment>
   )
 }

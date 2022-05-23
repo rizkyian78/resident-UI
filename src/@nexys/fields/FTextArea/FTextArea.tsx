@@ -19,13 +19,13 @@ export type FTextAreaProps = TextAreaProps &
 
 function FTextArea(props: FTextAreaProps) {
   const [field] = useField(props as any)
-  const [title, error] = useTitleAndError(props)
+  // const [title, error] = useTitleAndError(props)
 
   return (
     <React.Fragment>
-      {title}
+      {/* {title} */}
       <TextArea {...field} {...props} />
-      {error}
+      {/* {error} */}
     </React.Fragment>
   )
 }

@@ -11,11 +11,11 @@ function Table<D>(props: Partial<TableProps<D>>) {
     <div id={cssTable.customTable}>
       <Row>
         <Col xs={24}>
-          <ReactTable
+          {/* <ReactTable
             className={cx(className)}
             showPagination={false}
             {...otherProps}
-          />
+          /> */}
         </Col>
       </Row>
     </div>

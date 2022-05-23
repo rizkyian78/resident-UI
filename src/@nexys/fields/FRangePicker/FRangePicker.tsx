@@ -19,12 +19,12 @@ export type FRangePickerProps = RangePickerProps &
 
 function FRangePicker(props: FRangePickerProps) {
   const [field, , helpers] = useField(props as any)
-  const [title, error] = useTitleAndError(props)
+  // const [title, error] = useTitleAndError(props)
 
   return (
     <React.Fragment>
-      {title}
-      <RangePicker
+      {/* {title} */}
+      {/* <RangePicker
         {...field}
         onBlur={() => {
           helpers.setTouched(true)
@@ -36,8 +36,8 @@ function FRangePicker(props: FRangePickerProps) {
           helpers.setValue(value)
         }}
         {...props}
-      />
-      {error}
+      /> */}
+      {/* {error} */}
     </React.Fragment>
   )
 }

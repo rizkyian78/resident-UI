@@ -65,7 +65,7 @@ function DemoIndex(props: DemoIndexProps) {
             </Button>
           </Tooltip>
         </div>
-        {stateShowCode.isToggled && <CodeViewer text={sourceCode} />}
+        {stateShowCode.isToggled }
       </Card>
     </React.Fragment>
   )

@@ -15,12 +15,12 @@ function TableFixedColumns<D>(props: Partial<TableProps<D>>) {
     <div id={cssTable.customTable}>
       <Row>
         <Col xs={24}>
-          <ReactTableFixedColumns
+          {/* <ReactTableFixedColumns
             className={cx(className)}
             {...otherProps}
             // @ts-ignore
             showPagination={false}
-          />
+          /> */}
         </Col>
       </Row>
     </div>

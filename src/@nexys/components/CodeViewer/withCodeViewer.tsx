@@ -1,10 +1,11 @@
 import React from 'react'
 import Content from '@nexys/components/Content/Content'
 import dynamic from 'next/dynamic'
+import CodeViewer from '@nexys/components/CodeViewer/CodeViewer'
 
-const CodeViewer = dynamic(() =>
-  import('@nexys/components/CodeViewer/CodeViewer'),
-)
+// const CodeViewer = dynamic(() =>
+//   import('@nexys/components/CodeViewer/CodeViewer'),
+// )
 
 function withCodeViewer(keyProp, Component) {
   return function WithCodeViewer(props: any) {

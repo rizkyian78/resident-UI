@@ -17,13 +17,13 @@ export type FInputProps = InputProps &
 
 function FInput(props: FInputProps) {
   const [field] = useField(props as any)
-  const [title, error] = useTitleAndError(props)
+  // const [title, error] = useTitleAndError(props)
 
   return (
     <React.Fragment>
-      {title}
+      {/* {title} */}
       <Input {...field} {...props} />
-      {error}
+      {/* {error} */}
     </React.Fragment>
   )
 }

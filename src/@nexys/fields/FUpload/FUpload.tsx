@@ -11,11 +11,11 @@ export type FUploadProps = Partial<UploadProps> & {
 
 function FUpload(props: FUploadProps) {
   const [field, , helpers] = useField(props as any) // [valueField, valueMeta, valueHelpers]
-  const [title, error] = useTitleAndError(props)
+  // const [title, error] = useTitleAndError(props)
 
   return (
     <div>
-      {title}
+      {/* {title} */}
       <Upload
         onRemove={(file) => {
           const index = field.value.indexOf(file)
@@ -30,7 +30,7 @@ function FUpload(props: FUploadProps) {
         fileList={field.value}
         {...props}
       />
-      {error}
+      {/* {error} */}
     </div>
   )
 }

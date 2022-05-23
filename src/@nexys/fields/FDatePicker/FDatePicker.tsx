@@ -17,12 +17,12 @@ export type FDatePickerProps = DatePickerProps &
 
 function FDatePicker(props: FDatePickerProps) {
   const [field, , helpers] = useField(props as any)
-  const [title, error] = useTitleAndError(props)
+  // const [title, error] = useTitleAndError(props)
 
   return (
     <React.Fragment>
-      {title}
-      <DatePicker
+      {/* {title} */}
+      {/* <DatePicker
         {...field}
         onBlur={() => {
           helpers.setTouched(true)
@@ -35,7 +35,7 @@ function FDatePicker(props: FDatePickerProps) {
         }}
         {...props}
       />
-      {error}
+      {error} */}
     </React.Fragment>
   )
 }

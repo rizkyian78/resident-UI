@@ -7,7 +7,7 @@ import dynamic from 'next/dynamic'
 import { ReactQuillProps } from '@nexys/components/TextQuill/interface'
 
 const TextQuill = dynamic(
-  () => import('@nexys/components/TextQuill/TextQuill'),
+  // () => import('@nexys/components/TextQuill/TextQuill'),
   {
     ssr: false,
   },
@@ -61,12 +61,12 @@ const TextQuilModules = {
 
 function FQuill(props: FQuillProps) {
   const [field, , helpers] = useField(props as any)
-  const [title, error] = useTitleAndError(props)
+  // const [title, error] = useTitleAndError(props)
 
   return (
     <React.Fragment>
-      {title}
-      <TextQuill
+      {/* {title} */}
+      {/* <TextQuill
         {...field}
         theme="snow"
         modules={TextQuilModules}
@@ -78,8 +78,8 @@ function FQuill(props: FQuillProps) {
           helpers.setValue(value)
         }}
         {...props}
-      />
-      {error}
+      /> */}
+      {/* {error} */}
     </React.Fragment>
   )
 }

@@ -54,7 +54,8 @@ function getSiteLayout(props: AppProps) {
             {PageLayout ? (
               <PageLayout {...props} layoutProps={layoutProps} />
             ) : (
-              <Component {...pageProps} key={router.route} />
+              <p>okee</p>
+              // <Component {...pageProps} key={router.route} />
             )}
           </WrapperReactQuery>
         </DefaultLayoutContext.Provider>
@@ -65,7 +66,7 @@ function getSiteLayout(props: AppProps) {
   return (
     <DefaultLayoutContext.Provider value={pageProps}>
       <WrapperReactQuery>
-        <Component {...pageProps} key={router.route} />
+        {/* <Component {...pageProps} key={router.route} /> */}
       </WrapperReactQuery>
     </DefaultLayoutContext.Provider>
   )

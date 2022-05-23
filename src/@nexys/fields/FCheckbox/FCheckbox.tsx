@@ -18,7 +18,7 @@ export type FCheckboxProps = CheckboxProps &
 
 function FCheckbox(props: FCheckboxProps) {
   const [field] = useField(props as any)
-  const [, error] = useTitleAndError(props)
+  // const [, error] = useTitleAndError(props)
 
   return (
     <React.Fragment>
@@ -27,7 +27,7 @@ function FCheckbox(props: FCheckboxProps) {
           {props.title}
         </Text>
       </Checkbox>
-      {error}
+      {/* {error} */}
     </React.Fragment>
   )
 }
